@@ -9,18 +9,18 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="mx-auto max-w-full  px-8 py-12 md:py-16">
+      <main className="mx-auto max-w-full  px-8 py-4 md:py-12">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-2 text-center font-display text-4xl font-bold text-foreground md:text-5xl"
+          className="mb-1 text-center font-display text-4xl font-bold text-foreground md:text-5xl"
         >
           {t({ kk: "1-сынып / Информатика", ru: "1 класс / Информатика ", en: "Grade 1 / Informatics" }, lang)}
         </motion.h1>
-        <p className="mb-14 text-center text-lg text-muted-foreground">
+        <p className="mb-6 text-center text-lg text-muted-foreground">
           {t({ kk: "Сабақты таңдаңыз", ru: "Выберите урок", en: "Choose a lesson" }, lang)}
         </p>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {lessons.map((lesson, i) => (
             <motion.div
               key={lesson.id}
